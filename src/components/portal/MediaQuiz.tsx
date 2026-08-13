@@ -133,7 +133,7 @@ export function MediaQuiz() {
               <h3 className="mt-6 text-xl font-bold text-foreground">{QUESTIONS[step]!.q}</h3>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {QUESTIONS[step]!.options.map((o, i) => {
-                  const correct = picked !== null && i === QUESTIONS[step].a;
+                  const correct = picked !== null && i === QUESTIONS[step]!.a;
                   const wrong = picked === i && i !== QUESTIONS[step]!.a;
                   return (
                     <button
