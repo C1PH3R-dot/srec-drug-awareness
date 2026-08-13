@@ -57,7 +57,7 @@ export function MediaQuiz() {
   const choose = (i: number) => {
     if (picked !== null) return;
     setPicked(i);
-    if (i === QUESTIONS[step].a) setScore((s) => s + 1);
+    if (i === QUESTIONS[step]!.a) setScore((s) => s + 1);
     setTimeout(() => {
       setPicked(null);
       setStep((s) => s + 1);
@@ -130,11 +130,11 @@ export function MediaQuiz() {
                   style={{ width: `${(step / QUESTIONS.length) * 100}%` }}
                 />
               </div>
-              <h3 className="mt-6 text-xl font-bold text-foreground">{QUESTIONS[step].q}</h3>
+              <h3 className="mt-6 text-xl font-bold text-foreground">{QUESTIONS[step]!.q}</h3>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {QUESTIONS[step].options.map((o, i) => {
+                {QUESTIONS[step]!.options.map((o, i) => {
                   const correct = picked !== null && i === QUESTIONS[step].a;
-                  const wrong = picked === i && i !== QUESTIONS[step].a;
+                  const wrong = picked === i && i !== QUESTIONS[step]!.a;
                   return (
                     <button
                       key={o}

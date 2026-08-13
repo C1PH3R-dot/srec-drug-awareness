@@ -17,7 +17,7 @@ const DEPTS = [
 export function Pledge() {
   const [name, setName] = useState("");
   const [roll, setRoll] = useState("");
-  const [dept, setDept] = useState(DEPTS[0]);
+  const [dept, setDept] = useState(DEPTS[0]!);
   const [agreed, setAgreed] = useState(false);
   const [cert, setCert] = useState<Cert | null>(null);
 
