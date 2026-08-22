@@ -42,7 +42,11 @@ export function Pledge() {
     "w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none";
 
   return (
-    <section id="pledge" className="mx-auto max-w-7xl px-4 py-16">
+    <section id="pledge" className="relative mx-auto max-w-7xl px-4 py-16">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-950/20 to-cyan-950/30 animate-gradient-shift"></div>
+      </div>
       <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Anti-Drug Pledge</h2>
       <p className="mt-2 max-w-2xl text-muted-foreground">
         Sign the pledge and receive your personalised Certificate of Appreciation instantly.

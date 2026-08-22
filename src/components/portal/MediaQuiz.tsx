@@ -2,12 +2,48 @@ import { useState } from "react";
 import { Newspaper, RotateCcw } from "lucide-react";
 
 const NEWS = [
-  { title: "SREC hosts district-level anti-drug rally", tag: "Campus", date: "Mar 2026" },
-  { title: "NSS unit trains 200 peer counsellors", tag: "Initiative", date: "Feb 2026" },
-  { title: "Coimbatore police launch campus watch drive", tag: "City", date: "Jan 2026" },
-  { title: "Workshop: recognising early warning signs", tag: "Workshop", date: "Dec 2025" },
-  { title: "Student art contest on de-addiction", tag: "Culture", date: "Nov 2025" },
-  { title: "Pledge drive crosses 3,000 signatures", tag: "Milestone", date: "Oct 2025" },
+  {
+    title: "SREC hosts district-level anti-drug rally",
+    tag: "CAMPUS",
+    date: "Mar 2026",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+    description: "Over 500 students and faculty participated in the awareness rally.",
+  },
+  {
+    title: "NSS unit trains 200 peer counsellors",
+    tag: "INITIATIVE",
+    date: "Feb 2026",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
+    description: "Training program on identifying early signs and providing support.",
+  },
+  {
+    title: "Coimbatore police launch campus watch drive",
+    tag: "CITY",
+    date: "Jan 2026",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
+    description: "Joint effort with law enforcement for a safer campus environment.",
+  },
+  {
+    title: "Workshop: recognising early warning signs",
+    tag: "WORKSHOP",
+    date: "Dec 2025",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    description: "Educate students and staff on behavioral and physical indicators.",
+  },
+  {
+    title: "Student art contest on de-addiction",
+    tag: "CULTURE",
+    date: "Nov 2025",
+    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80",
+    description: "Creative expression and awareness through student artwork.",
+  },
+  {
+    title: "Pledge drive crosses 3,000 signatures",
+    tag: "MILESTONE",
+    date: "Oct 2025",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+    description: "Community commitment to a drug-free campus continues to grow.",
+  },
 ];
 
 const QUESTIONS = [
@@ -73,21 +109,55 @@ export function MediaQuiz() {
   const badge = score >= 5 ? "Campus Champion" : score >= 3 ? "Aware Ally" : "Keep Learning";
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16">
+    <section className="relative mx-auto max-w-7xl px-4 py-16">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-cyan-950/20 to-slate-950/40 animate-gradient-shift"></div>
+      </div>
       <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Media Hub</h2>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {NEWS.map((n) => (
           <article
             key={n.title}
-            className="group glass relative aspect-square overflow-hidden rounded-3xl p-6"
+            className="group glass rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer"
           >
-            <Newspaper className="h-6 w-6 text-primary" />
-            <span className="mt-4 block text-[11px] font-bold tracking-wider text-primary uppercase">
-              {n.tag} &middot; {n.date}
-            </span>
-            <h3 className="mt-2 text-lg font-bold text-foreground">{n.title}</h3>
-            <div className="glass absolute inset-0 flex translate-y-full items-center justify-center p-6 text-center text-sm font-semibold text-foreground opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              Read how the SREC community turned this into campus-wide action.
+            {/* Image Header with Gradient Overlay */}
+            <div className="relative h-40 overflow-hidden bg-gradient-to-b from-cyan-600 to-cyan-900">
+              <img
+                src={n.image}
+                alt={n.title}
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"></div>
+
+              {/* Tag Pill */}
+              <div className="absolute top-3 left-3">
+                <span className="inline-block rounded-full bg-cyan-500/90 px-3 py-1 text-xs font-bold text-white uppercase tracking-wider">
+                  {n.tag}
+                </span>
+              </div>
+
+              {/* Date Badge */}
+              <div className="absolute bottom-3 right-3 text-xs font-semibold text-white">
+                {n.date}
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-4">
+              <h3 className="text-base font-bold text-foreground line-clamp-2 mb-2">
+                {n.title}
+              </h3>
+              <p className="text-xs text-muted-foreground line-clamp-2">
+                {n.description}
+              </p>
+
+              {/* Hover Reveal */}
+              <div className="mt-3 flex gap-2">
+                <button className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Read More →
+                </button>
+              </div>
             </div>
           </article>
         ))}

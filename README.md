@@ -74,15 +74,15 @@ Key Components & Placeholders:
 
 Ensure all buttons, theme state transitions, modals, forms, and quiz functions work properly without any text readability or contrast issues.
 
-This project was built with [Lovable](https://lovable.dev).
+This project is a drug-free campus awareness initiative by Sri Ramakrishna Engineering College.
 
-## Build with Lovable
+## About SREC Shine Aware
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/6996c54f-5660-42a2-921e-6a159d70d72e).
+SREC Shine Aware is an official student initiative promoting awareness and support for a drug-free campus.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **Awareness**: Educational content about substance abuse prevention
+- **Support**: Resources and helplines for students in need
+- **Community**: Building a supportive campus culture
 
 ## Development
 

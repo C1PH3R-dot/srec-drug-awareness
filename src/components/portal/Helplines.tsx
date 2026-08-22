@@ -32,7 +32,11 @@ export function Helplines() {
   };
 
   return (
-    <section id="helplines" className="mx-auto max-w-7xl px-4 py-16">
+    <section id="helplines" className="relative mx-auto max-w-7xl px-4 py-16">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/20 via-slate-950/30 to-slate-950/50 animate-gradient-shift"></div>
+      </div>
       <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Coimbatore Helplines</h2>
       <p className="mt-2 max-w-2xl text-muted-foreground">
         Free, confidential and available around the clock. Tap to dial or copy the number.

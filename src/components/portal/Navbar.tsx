@@ -25,9 +25,11 @@ export function Navbar() {
       <header className="sticky top-0 z-50 px-3 pt-3">
         <nav className="glass mx-auto flex max-w-7xl items-center gap-4 rounded-2xl px-4 py-3">
           <a href="#top" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-dashed border-glass-border bg-secondary text-[9px] font-semibold text-muted-foreground">
-              LOGO
-            </div>
+            <img
+              src="/srec-logo.png"
+              alt="SREC Logo"
+              className="h-11 w-11 rounded-xl object-contain"
+            />
             <div className="leading-tight">
               <p className="font-display text-sm font-bold text-foreground">SREC</p>
               <p className="hidden text-[11px] text-muted-foreground sm:block">

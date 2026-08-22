@@ -8,15 +8,19 @@ const BIO = [
 
 export function Principal() {
   return (
-    <section id="principal" className="mx-auto max-w-7xl px-4 py-16">
+    <section id="principal" className="relative mx-auto max-w-7xl px-4 py-16">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-cyan-950/20 to-slate-950/40 animate-gradient-shift"></div>
+      </div>
       <div className="glass rounded-[2rem] p-6 sm:p-10">
         <h2 className="text-3xl font-bold text-foreground sm:text-4xl">Principal&apos;s Message</h2>
         <div className="mt-8 grid gap-8 md:grid-cols-[260px_1fr]">
-          <div className="glass flex aspect-[4/5] items-center justify-center rounded-3xl border-dashed text-center text-xs font-semibold text-muted-foreground">
-            [Principal Photo
-            <br />
-            Dr. A. Soundarrajan]
-          </div>
+          <img
+            src="/principal.jpg"
+            alt="Dr. A. Soundarrajan"
+            className="glass aspect-[4/5] rounded-3xl object-cover"
+          />
           <div>
             <Quote className="h-8 w-8 text-primary" />
             <p className="mt-3 text-xl leading-relaxed font-medium text-foreground">

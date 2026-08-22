@@ -6,7 +6,10 @@ import { Education } from "@/components/portal/Education";
 import { Principal } from "@/components/portal/Principal";
 import { Pledge } from "@/components/portal/Pledge";
 import { Helplines } from "@/components/portal/Helplines";
+import { MapIntegration } from "@/components/portal/MapIntegration";
 import { MediaQuiz } from "@/components/portal/MediaQuiz";
+import { Footer } from "@/components/portal/Footer";
+import { AnonymousChatbot } from "@/components/portal/AnonymousChatbot";
 
 const title = "SREC Drug-Free Campus Awareness Portal";
 const description =
@@ -38,12 +41,11 @@ function Index() {
           <Principal />
           <Pledge />
           <Helplines />
+          <MapIntegration />
           <MediaQuiz />
         </main>
-        <footer className="mx-auto max-w-7xl px-4 py-10 text-center text-sm text-muted-foreground">
-          Sri Ramakrishna Engineering College, Coimbatore &middot; Drug-Free Society &amp; Campus
-          Awareness Initiative
-        </footer>
+        <Footer />
+        <AnonymousChatbot />
       </div>
     </ThemeProvider>
   );
